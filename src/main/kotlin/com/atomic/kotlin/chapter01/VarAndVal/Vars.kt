@@ -1,4 +1,4 @@
-package com.example.atomic.kotlin.VarandVal
+package com.atomic.kotlin.chapter01.VarAndVal
 
 fun main() {
     var whole = 11

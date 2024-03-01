@@ -1,4 +1,4 @@
-package com.example.atomic.kotlin.IfExpression
+package com.atomic.kotlin.chapter01.IfExpression
 
 fun main() {
     if (1 > 0)

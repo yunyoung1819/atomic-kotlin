@@ -1,4 +1,4 @@
-package com.example.atomic.kotlin.Functions
+package com.atomic.kotlin.chapter01.Functions
 
 /**
  * 함수
@@ -11,6 +11,6 @@ fun multiplyByTwo(x: Int): Int {
 }
 
 fun main() {
-    val r = multiplyByTwo(5)
+    val r = com.atomic.kotlin.chapter01.Functions.multiplyByTwo(5)
     println(r)
 }

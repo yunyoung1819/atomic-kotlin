@@ -1,4 +1,4 @@
-package com.example.atomic.kotlin.DataTypes
+package com.atomic.kotlin.chapter01.DataTypes
 
 /**
  * 데이터 타입
