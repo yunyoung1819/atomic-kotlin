@@ -1,4 +1,6 @@
-package com.atomic.kotlin.chapter01.LoopingAndRanges
+fun main() {
+    val ch: Char = 'a'
+    println(ch + 25)
+    println(ch < 'z')
 
-class AddingIntToChar {
 }
