@@ -1,4 +1,8 @@
-package com.atomic.kotlin.chapter02.Properties
+val constant = 100
 
-class TopLevelProperty {
+var counter = 0
+
+
+fun inc() {
+    counter++
 }

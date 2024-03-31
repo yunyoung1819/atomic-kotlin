@@ -1,4 +1,10 @@
-package com.atomic.kotlin.chapter02.Properties
+class Sofa {
+    val cover: String = "Loveseat cover"
+}
 
-class AnUnchangingVar {
+fun main() {
+    var sofa = Sofa()
+    // 다음은 허용되지 않음
+    // sofa.cover = "New cover"
+    sofa = Sofa()
 }
