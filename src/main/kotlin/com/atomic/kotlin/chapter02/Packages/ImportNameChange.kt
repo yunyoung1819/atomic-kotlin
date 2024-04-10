@@ -1,4 +1,8 @@
-package com.atomic.kotlin.chapter02.Packages
+import kotlin.math.PI as circleRatio
+import kotlin.math.cos as cosine
 
-class ImportNameChange {
+fun main() {
+    println(circleRatio)
+    println(cosine(circleRatio))
+    println(cosine(2 * circleRatio))
 }
