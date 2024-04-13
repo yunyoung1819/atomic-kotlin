@@ -1,4 +1,4 @@
-package com.atomic.kotlin.AtomicTest
+package com.atomic.kotlin.atomicTest
 
 import kotlin.math.abs
 import kotlin.reflect.KClass
@@ -54,4 +54,32 @@ infix fun Double.eq(rval: Double) {
     test(this, rval) {
         abs(this - rval) < 0.0000001
     }
+}
+
+/**
+ * 포획한 예외 정보를 저장하는 클래스
+ *
+ */
+class CapturedException(
+    private val exceptionClass: KClass<*>?,
+    private val actualMessage: String
+) {
+    private val fullMessage: String
+        get() {
+            val className =
+                exceptionClass?.simpleName ?: ""
+            return className + actualMessage
+        }
+    infix fun eq(message: String) {
+        fullMessage eq message
+    }
+    infix fun contains(parts: List<String>) {
+        if (parts.any { it !in fullMessage }) {
+            print(ERROR_TAG)
+            println("Actual Message: $fullMessage")
+            println("Expected parts: $parts")
+        }
+    }
+
+    override fun toString() = fullMessage
 }
