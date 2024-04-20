@@ -83,3 +83,39 @@ class CapturedException(
 
     override fun toString() = fullMessage
 }
+
+/**
+ * 예외를 포획해 CapturedExeption에 저장한 후 돌려준다
+ */
+fun captuer(f:() -> Unit): CapturedException =
+    try {
+        f()
+        CapturedException(null, "$ERROR_TAG Expected an exception")
+    } catch (e: Throwable) {
+        CapturedException(e::class,
+            (e.message?.let { ": $it" } ?: ""))
+    }
+
+/**
+ * 다음과 같이 여러 trace() 호출의 출력을 누적시켜준다
+ * trace("info")
+ * trace(object)
+ * 나중에 누적된 출력을 예상값과 비교할 수 있다
+ * trace eq "expected output"
+ */
+object trace {
+    private val trc = mutableListOf<String>()
+    operator fun invoke(obj: Any?) {
+        trc += obj.toString()
+    }
+
+    infix fun eq(multiline: String) {
+        val trace = trc.joinToString("\n")
+        val expected = multiline.trimIndent()
+            .replace("\n", " ")
+        test(trace, multiline) {
+            trace.replace("\n", " ") == expected
+        }
+        trc.clear()
+    }
+}
