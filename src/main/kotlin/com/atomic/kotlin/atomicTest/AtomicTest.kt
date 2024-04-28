@@ -87,7 +87,7 @@ class CapturedException(
 /**
  * 예외를 포획해 CapturedExeption에 저장한 후 돌려준다
  */
-fun captuer(f:() -> Unit): CapturedException =
+fun capture(f:() -> Unit): CapturedException =
     try {
         f()
         CapturedException(null, "$ERROR_TAG Expected an exception")
