@@ -1,5 +1,8 @@
 package com.atomic.kotlin.atomicTest.solution
 
+/**
+ * https://school.programmers.co.kr/learn/courses/30/lessons/120830
+ */
 fun main() {
     var n = 10
     var k = 3

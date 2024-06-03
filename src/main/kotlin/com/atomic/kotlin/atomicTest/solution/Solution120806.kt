@@ -1,6 +1,8 @@
 package com.atomic.kotlin.atomicTest.solution
 
-
+/**
+ * https://school.programmers.co.kr/learn/courses/30/lessons/120806
+ */
 const val num3 = 1000
 
 fun main() {

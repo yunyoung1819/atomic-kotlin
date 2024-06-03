@@ -1,5 +1,8 @@
 package com.atomic.kotlin.atomicTest.solution
 
+/**
+ * https://school.programmers.co.kr/learn/courses/30/lessons/120818
+ */
 fun main() {
     val price = 150_000
     val result = calculateDiscount(price)

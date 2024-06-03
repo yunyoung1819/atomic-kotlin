@@ -1,4 +1,4 @@
-package com.atomic.kotlin.chapter03.extenstionFunctions
+package com.atomic.kotlin.chapter03.ExtenstionFunctions
 
 fun String.isEmptys(): Boolean {
     return this.length == 0

@@ -1,4 +1,4 @@
-package com.atomic.kotlin.chapter03.extenstionFunctions
+package com.atomic.kotlin.chapter03.ExtenstionFunctions
 
 fun List<Int>.sums(): Int {
     var sum = 0

@@ -1,4 +1,4 @@
-package com.atomic.kotlin.chapter03.extenstionFunctions
+package com.atomic.kotlin.chapter03.ExtenstionFunctions
 
 import com.atomic.kotlin.atomicTest.eq
 
