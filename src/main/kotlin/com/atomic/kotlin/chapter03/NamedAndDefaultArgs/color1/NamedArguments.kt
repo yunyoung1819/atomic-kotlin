@@ -1,4 +1,4 @@
-package com.atomic.kotlin.chapter03.NamedAndDefaultArgs
+package com.atomic.kotlin.chapter03.NamedAndDefaultArgs.color1
 
 import com.atomic.kotlin.atomicTest.*
 
