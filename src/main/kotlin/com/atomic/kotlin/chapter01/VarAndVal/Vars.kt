@@ -3,7 +3,7 @@ package com.atomic.kotlin.chapter01.VarAndVal
 fun main() {
     var whole = 11
     var fractional = 1.4
-    var words = "Twas Brilling"
+    var words = "Twas Brillig"
     println(whole)
     println(fractional)
     println(words)
